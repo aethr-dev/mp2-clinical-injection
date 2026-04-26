@@ -202,3 +202,55 @@ characterization that the rubric was designed to produce (whether models
 binary maps cleanly onto these qualitative behaviors) remains an open
 question for v0.2 — and is itself one of the strongest reasons to run
 v0.2.
+
+### 2026-04-26 — Vendor responsible-disclosure executed concurrent with public release rather than before
+
+**Deviation:** `docs/METHODOLOGY.md` § Ethics commits to sharing findings
+with "affected model vendors before public release (standard
+responsible-disclosure practice)" and names Alibaba (Qwen 3), Meta
+(Llama 3.1), Google (Gemma 2), and Mistral AI (Mistral 7B) as the
+affected vendors for the open-weight arm. Pre-public disclosure to
+these four vendors was not executed prior to flipping the repository
+public on 2026-04-26. Vendor notification is being sent post-public
+within 7 days of public release.
+
+**Rationale:** The pre-disclosure commitment in the locked methodology
+was more conservative than community standard for the class of finding
+reported. CPIB v0.1 documents (a) clinical-framing variants of
+already-documented prompt-injection patterns, (b) findings that prompt-
+level mitigations are insufficient at this size class — a result
+consistent with prior practitioner experience with 7–9B open-weight
+models — and (c) heterogeneous (model × attack-vector) effects, with
+one positive result (Qwen 3 H2a) and three opposite-direction results.
+The findings are not novel zero-day vulnerabilities against deployed
+production systems; they are replication-and-extension findings for
+open-weight models that any researcher could reproduce locally with
+the published code. Comparable benchmarks (HELM-Safety, GARAK,
+PurpleLlama) routinely publish attack templates publicly without
+per-vendor pre-disclosure. Time-budget pressure on a hard external
+submission deadline (Anthropic Fellows application, 2026-04-26) made
+the alternative — embargo, multi-vendor coordinated disclosure window,
+delayed submission — infeasible without dropping the application
+cycle.
+
+**Affected outcomes:** None on primary or secondary outcomes. The
+deviation is a methodology-compliance gap relative to the
+pre-registration's ethics commitment, not a data-integrity or
+analysis gap.
+
+**Corrective action:** Async vendor notification within 7 days of
+public release (target by 2026-05-03). Notification includes (a) link
+to the public repository, (b) link to the v0.1 writeup, (c) brief
+summary of the per-vendor finding (e.g., for Alibaba: Qwen 3 8B was
+the only model showing the predicted clinical-framing-bypass effect
+under direct injection in Scenario 2; mitigation provided no
+defensive benefit), and (d) standard "no expected response" courtesy
+framing. Confirmation receipts (where vendors respond) will be logged
+in a follow-up entry.
+
+**Reporting impact:** Writeup does not currently mention this deviation
+explicitly; the methodology section's pre-disclosure commitment is
+visible to any reviewer. This DEVIATIONS entry is the auditable record
+of the gap and the corrective action. If the writeup is updated for a
+v0.2 republication, an explicit note is added to its ethics section
+acknowledging the v0.1 disclosure timing.

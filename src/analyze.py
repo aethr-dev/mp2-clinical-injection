@@ -525,8 +525,8 @@ def make_primary_figure(
                 p = c["n_success"] / n_valid if n_valid > 0 else 0.0
                 lo, hi = wilson_ci(c["n_success"], n_valid)
                 heights.append(p)
-                err_lo.append(p - lo)
-                err_hi.append(hi - p)
+                err_lo.append(max(0.0, p - lo))
+                err_hi.append(max(0.0, hi - p))
                 hatched.append(not gate.get((sid, model), False))
             xs = [x + (mi - (n_models - 1) / 2) * bar_w for x in x_base]
             bars = ax.bar(

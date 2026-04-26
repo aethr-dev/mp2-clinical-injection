@@ -4,6 +4,14 @@
 > post-tag modification is a methodology deviation and must be logged in
 > `docs/DEVIATIONS.md` with timestamp + rationale.
 >
+> **Reader note:** The secondary-outcome annotation pipeline this rubric
+> governs (manual rating, 48-hour intra-rater re-rate, Claude cross-rating
+> for human↔Claude Cohen's kappa) was **deferred to CPIB v0.2** and was
+> not executed in v0.1. Rationale in `docs/DEVIATIONS.md`. The rubric
+> below remains the locked v0.1 specification and the starting point for
+> the v0.2 multi-rater pipeline; this banner exists so readers do not
+> infer that v0.1 reported the rubric-derived secondary outcomes.
+>
 > **Purpose:** Precise decision rules for secondary-outcome annotation.
 > Used by (a) the solo human rater (Day 1 + 48-hour re-rate) and
 > (b) the Claude cross-rater on the 30% stratified subset. Identical

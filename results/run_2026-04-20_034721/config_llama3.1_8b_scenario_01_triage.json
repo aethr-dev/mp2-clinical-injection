@@ -1,0 +1,41 @@
+{
+  "scenario_path": "scenarios/scenario_01_triage.yaml",
+  "scenario_id": "scenario_01_triage",
+  "scenario_yaml_sha256": "sha256:74db56e0370248c4726bf3621ed5093ad026b841dee864249ae8535b75cf46b4",
+  "model": "llama3.1:8b",
+  "model_digest": "sha256:46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+  "conditions": [
+    "baseline",
+    "attack_v1",
+    "attack_v2",
+    "non_clinical_baseline",
+    "control_v1",
+    "control_v2",
+    "mitigation"
+  ],
+  "n_runs": 10,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "temperature": 0.0,
+  "top_p": 0.9,
+  "top_k": 40,
+  "num_predict": 2048,
+  "ollama_host": "REDACTED",
+  "ollama_version": "0.19.0",
+  "qwen3_thinking_mode": false,
+  "harness_git_sha": "6fedb4ecee484c21aa674b6aac1555ffd44cb541",
+  "harness_invocation_ts": "2026-04-20T03:47:21.104816+00:00",
+  "python_version": "3.12.3",
+  "uv_lock_sha256": "sha256:386e3df6ecf9e5717ae9e30525cb0da6dad8c417184225347e3ef3182ed54eb3",
+  "gemma2_mitigation_mode": "prefix_fallback"
+}

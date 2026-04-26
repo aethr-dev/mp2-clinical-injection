@@ -1,0 +1,328 @@
+{
+  "run_dir": "results/run_2026-04-20_034721",
+  "created_ts": "2026-04-20T03:47:21.103865+00:00",
+  "harness_git_sha": "6fedb4ecee484c21aa674b6aac1555ffd44cb541",
+  "scenarios": {
+    "scenario_01_triage": {
+      "path": "scenarios/scenario_01_triage.yaml",
+      "sha256": "sha256:74db56e0370248c4726bf3621ed5093ad026b841dee864249ae8535b75cf46b4"
+    },
+    "scenario_02_summarization": {
+      "path": "scenarios/scenario_02_summarization.yaml",
+      "sha256": "sha256:cbddd020ee11f491e2cb0cd13bac8f03a2b643ef0b0154c22b8c057764b304c1"
+    }
+  },
+  "models": [
+    "qwen3:8b",
+    "llama3.1:8b",
+    "gemma2:9b",
+    "mistral:7b"
+  ],
+  "model_digests": {
+    "qwen3:8b": "sha256:500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "llama3.1:8b": "sha256:46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+    "gemma2:9b": "sha256:ff02c3702f322b9e075e9568332d96c0a7028002f1a5a056e0a6784320a4db0b",
+    "mistral:7b": "sha256:6577803aa9a036369e481d648a2baebb381ebc6e897f2bb9a766a2aa7bfbc1cf"
+  },
+  "ollama_version": "0.19.0",
+  "pinned": {
+    "temperature": 0.0,
+    "top_p": 0.9,
+    "top_k": 40,
+    "num_predict": 2048,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51
+    ]
+  },
+  "cells_completed": [
+    {
+      "scenario": "scenario_01_triage",
+      "model": "qwen3:8b",
+      "condition": "baseline"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "qwen3:8b",
+      "condition": "attack_v1"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "qwen3:8b",
+      "condition": "attack_v2"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "qwen3:8b",
+      "condition": "non_clinical_baseline"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "qwen3:8b",
+      "condition": "control_v1"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "qwen3:8b",
+      "condition": "control_v2"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "qwen3:8b",
+      "condition": "mitigation"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "llama3.1:8b",
+      "condition": "baseline"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "llama3.1:8b",
+      "condition": "attack_v1"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "llama3.1:8b",
+      "condition": "attack_v2"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "llama3.1:8b",
+      "condition": "non_clinical_baseline"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "llama3.1:8b",
+      "condition": "control_v1"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "llama3.1:8b",
+      "condition": "control_v2"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "llama3.1:8b",
+      "condition": "mitigation"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "gemma2:9b",
+      "condition": "baseline"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "gemma2:9b",
+      "condition": "attack_v1"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "gemma2:9b",
+      "condition": "attack_v2"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "gemma2:9b",
+      "condition": "non_clinical_baseline"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "gemma2:9b",
+      "condition": "control_v1"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "gemma2:9b",
+      "condition": "control_v2"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "gemma2:9b",
+      "condition": "mitigation"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "mistral:7b",
+      "condition": "baseline"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "mistral:7b",
+      "condition": "attack_v1"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "mistral:7b",
+      "condition": "attack_v2"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "mistral:7b",
+      "condition": "non_clinical_baseline"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "mistral:7b",
+      "condition": "control_v1"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "mistral:7b",
+      "condition": "control_v2"
+    },
+    {
+      "scenario": "scenario_01_triage",
+      "model": "mistral:7b",
+      "condition": "mitigation"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "qwen3:8b",
+      "condition": "baseline"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "qwen3:8b",
+      "condition": "attack_v1"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "qwen3:8b",
+      "condition": "attack_v2"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "qwen3:8b",
+      "condition": "non_clinical_baseline"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "qwen3:8b",
+      "condition": "control_v1"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "qwen3:8b",
+      "condition": "control_v2"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "qwen3:8b",
+      "condition": "mitigation"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "llama3.1:8b",
+      "condition": "baseline"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "llama3.1:8b",
+      "condition": "attack_v1"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "llama3.1:8b",
+      "condition": "attack_v2"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "llama3.1:8b",
+      "condition": "non_clinical_baseline"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "llama3.1:8b",
+      "condition": "control_v1"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "llama3.1:8b",
+      "condition": "control_v2"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "llama3.1:8b",
+      "condition": "mitigation"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "gemma2:9b",
+      "condition": "baseline"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "gemma2:9b",
+      "condition": "attack_v1"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "gemma2:9b",
+      "condition": "attack_v2"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "gemma2:9b",
+      "condition": "non_clinical_baseline"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "gemma2:9b",
+      "condition": "control_v1"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "gemma2:9b",
+      "condition": "control_v2"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "gemma2:9b",
+      "condition": "mitigation"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "mistral:7b",
+      "condition": "baseline"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "mistral:7b",
+      "condition": "attack_v1"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "mistral:7b",
+      "condition": "attack_v2"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "mistral:7b",
+      "condition": "non_clinical_baseline"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "mistral:7b",
+      "condition": "control_v1"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "mistral:7b",
+      "condition": "control_v2"
+    },
+    {
+      "scenario": "scenario_02_summarization",
+      "model": "mistral:7b",
+      "condition": "mitigation"
+    }
+  ]
+}

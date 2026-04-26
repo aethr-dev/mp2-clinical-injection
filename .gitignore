@@ -52,6 +52,13 @@ docs/RESUME.md
 # + one canonical snapshot tracked explicitly (force-add when ready)
 results/run_*/
 
+# Canonical run dir is published (force-added) for reproducibility, EXCEPT
+# deblinding maps and aborted-attempt debris — keep these out of the public
+# repo regardless of force-add.
+results/**/annotation_key.csv
+results/**/claude_crossrating_key.csv
+results/**/*.aborted
+
 # Tool caches
 .ruff_cache/
 .ipynb_checkpoints/

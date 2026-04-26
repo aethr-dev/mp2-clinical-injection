@@ -1,10 +1,10 @@
 # FUTURE WORK — CPIB Backlog
 
 > **Status:** Living document. v1 is included in the `pre-registration-v1`
-> git tag as the set of items scoped out of CPIB v0.1 (Option A). Post-tag
-> additions are appended to § 10 Changelog with a date and are **not**
-> pre-registration deviations — the pre-reg locks CPIB v0.1's primary
-> analysis, not this backlog.
+> git tag as the set of items intentionally scoped out of CPIB v0.1.
+> Post-tag additions are appended to § 10 Changelog with a date and are
+> **not** pre-registration deviations — the pre-reg locks CPIB v0.1's
+> primary analysis, not this backlog.
 >
 > **Purpose:** Single inventory of study ideas, harness extensions, defense
 > studies, and methodology upgrades that are intentionally out of scope for
@@ -188,15 +188,17 @@ thinking-mode states = 140 runs. Thinking traces add analysis complexity
 (pattern-match whether the CoT flagged the injection even when the final
 answer did not).
 
-### 4.2 Additional frontier comparators
-**Idea.** CPIB v0.1 includes one frontier vendor at Tier 1 (Claude Sonnet 4.6,
-gated behind Gate 1 GO). Extending the frontier arm to additional vendors
-would decompose "frontier-scale robustness" from "single-vendor behavior."
+### 4.2 Frontier comparator(s)
+**Idea.** v0.1 specified Claude Sonnet 4.6 as an optional Tier 1 frontier
+comparator arm but did not execute it (deferred to v0.2 per
+`docs/DEVIATIONS.md`). v0.2 should execute the frontier comparator and,
+ideally, extend to additional vendors so per-vendor effects are
+distinguishable from frontier-scale-class behavior.
 
-**Why it matters.** Any per-vendor effect observed in v0.1's frontier arm
-cannot distinguish frontier-scale robustness from idiosyncratic single-vendor
-behavior. Multiple frontier comparators are required to make a generalizability
-claim about "frontier scale."
+**Why it matters.** A single frontier vendor cannot distinguish
+"frontier-scale robustness" from idiosyncratic single-vendor behavior.
+Multiple frontier comparators are required to make a generalizability
+claim about "frontier scale" rather than "vendor X."
 
 **Rough scope.** Per additional vendor: 2 scenarios × 3 conditions × 5 runs =
 30 calls. Vendor selection is constrained by this project's data-handling
@@ -225,9 +227,11 @@ CPIB v0.1 responses. Inter-rater Cohen's kappa strengthens the
 secondary-outcome measurement by escaping the single-rater reliability
 ceiling.
 
-**Why it matters.** v0.1 reports intra-rater kappa (48hr re-rate) +
-human↔Claude kappa. True inter-rater human reliability is absent.
-Documented limitation, but a real one.
+**Why it matters.** v0.1 deferred the full secondary-annotation pass
+(intra-rater 48hr kappa, Claude cross-rating kappa) to v0.2 per
+`docs/DEVIATIONS.md`. A second human rater for v0.2 closes the
+single-rater reliability ceiling that the original pre-registration
+already named as a limitation.
 
 **Rough scope.** ~3 hours rater time + ~1 hour reconciliation. Finds a
 home naturally in CPIB v0.2 or a follow-up writeup.
@@ -366,3 +370,8 @@ record of what was considered is auditable.
   as the scoped-out set at v0.1 submit. Covers scenario expansion (3
   items), attack space (3), defense space (3), model coverage (3),
   annotation (4), infrastructure (2), statistical power (2).
+- v1.1 (2026-04-26): Factual updates to §4.2 (frontier comparator) and
+  §5.1 (second human rater) reflecting that v0.1 deferred the Tier 1
+  frontier arm and the full secondary-annotation pass to v0.2 per
+  `docs/DEVIATIONS.md`. No backlog items added or removed; only the
+  context-setting prose for items already in the backlog was corrected.

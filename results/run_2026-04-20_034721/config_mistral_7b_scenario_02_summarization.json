@@ -1,0 +1,41 @@
+{
+  "scenario_path": "scenarios/scenario_02_summarization.yaml",
+  "scenario_id": "scenario_02_summarization",
+  "scenario_yaml_sha256": "sha256:cbddd020ee11f491e2cb0cd13bac8f03a2b643ef0b0154c22b8c057764b304c1",
+  "model": "mistral:7b",
+  "model_digest": "sha256:6577803aa9a036369e481d648a2baebb381ebc6e897f2bb9a766a2aa7bfbc1cf",
+  "conditions": [
+    "baseline",
+    "attack_v1",
+    "attack_v2",
+    "non_clinical_baseline",
+    "control_v1",
+    "control_v2",
+    "mitigation"
+  ],
+  "n_runs": 10,
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "temperature": 0.0,
+  "top_p": 0.9,
+  "top_k": 40,
+  "num_predict": 2048,
+  "ollama_host": "REDACTED",
+  "ollama_version": "0.19.0",
+  "qwen3_thinking_mode": false,
+  "harness_git_sha": "6fedb4ecee484c21aa674b6aac1555ffd44cb541",
+  "harness_invocation_ts": "2026-04-20T03:47:21.106416+00:00",
+  "python_version": "3.12.3",
+  "uv_lock_sha256": "sha256:386e3df6ecf9e5717ae9e30525cb0da6dad8c417184225347e3ef3182ed54eb3",
+  "gemma2_mitigation_mode": "prefix_fallback"
+}

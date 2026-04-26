@@ -9,3 +9,18 @@ repos:
         args: ['--baseline', '.secrets.baseline']
         # If a NEW secret pattern appears that's not in baseline → commit blocked
         # To audit and update: `detect-secrets audit .secrets.baseline`
+
+  - repo: local
+    hooks:
+      - id: opsec-scan
+        name: OPSEC pattern scan (.opsec/scan.sh on staged diff)
+        entry: .opsec/scan.sh --no-detect-secrets
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]
+        # Sources patterns from ~/.opsec/patterns.txt (private, outside repo)
+        # Default mode = staged diff; blocks commit on any pattern hit
+        # --no-detect-secrets skips scan.sh's complementary detect-secrets
+        # call, since detect-secrets is already its own separate hook above
+        # (avoids double-run and baseline-timestamp drift on every commit)
+        # To run manually: ./.opsec/scan.sh   (or --all-tracked / --working / --path)

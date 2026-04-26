@@ -1,13 +1,18 @@
 # SCOPE — MP-2 Tiered Execution Plan
 
 > **Source:** internal scope decision, 2026-04-17 (consolidated into this repo).
+>
+> **Reader note:** This is a pre-execution scope-lock document, frozen at the
+> dates in its changelog. For the current state of the project — what was
+> actually executed, the analyzed results, and any deviations from the plan
+> below — see `docs/WRITEUP.md` and `docs/DEVIATIONS.md`.
 
 ---
 
 ## Status
 
-Active. Governs execution through April 24, 2026 submit target. Revisit if
-submit date slips or scope conditions change materially.
+Pre-execution scope lock (frozen). For execution outcomes, see
+`docs/WRITEUP.md`; for plan deviations, see `docs/DEVIATIONS.md`.
 
 ## Research Goal
 

@@ -2,12 +2,21 @@
 
 > **Source:** `SPEC_lane1-healthcare-ai-mp2-methodology_2026-04-17_v1` (project
 > knowledge). Copied here so the repo is self-contained.
+>
+> **Reader note:** This methodology document is frozen at the dates in its
+> changelog as part of the pre-execution methodology lock. For the current
+> state of the project — what was actually executed, the analyzed results,
+> and any deviations from the methodology below — see `docs/WRITEUP.md` and
+> `docs/DEVIATIONS.md`. In particular, secondary outcomes described here
+> (manual rubric annotation, Claude cross-rating, intra-rater Cohen's kappa)
+> were deferred to CPIB v0.2; rationale in `docs/DEVIATIONS.md`.
 
 ---
 
 ## Status
 
-Active. Governs Tier 0 execution per `docs/SCOPE.md`.
+Pre-execution methodology lock (frozen). For execution outcomes, see
+`docs/WRITEUP.md`; for plan deviations, see `docs/DEVIATIONS.md`.
 
 ## Research Question
 

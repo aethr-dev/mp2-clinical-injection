@@ -118,10 +118,17 @@ def load_run_context(run_dir: Path, scenarios_dir: Path) -> RunContext:
         m = CELL_NAME_RE.match(p.name)
         if not m:
             continue
+        # Fallback scenario_id from the regex in case the file is
+        # unparseable/empty. This may be wrong for names like
+        # ``scenario_01_triage_mistral_7b_*`` where CELL_NAME_RE's greedy
+        # ``[a-z_]+`` gobbles model-name fragments (e.g., "mistral",
+        # "gemma") into the scenario group. Row fields (below) are the
+        # authoritative source when available.
         sid = m.group(1)
-        # Recover model from the rows themselves to be unambiguous —
-        # CELL_NAME_RE.group(2) splits at last underscore which is wrong for
-        # models like ``llama3.1_8b``. Trust the row's ``model`` field instead.
+        # Recover scenario_id, model, condition from the rows themselves to
+        # be unambiguous — CELL_NAME_RE is inherently ambiguous for model
+        # slugs containing common tokens (mistral, gemma) or dots
+        # (llama3.1). Trust the row fields instead.
         rows: list[dict[str, Any]] = []
         try:
             with p.open() as f:
@@ -137,6 +144,8 @@ def load_run_context(run_dir: Path, scenarios_dir: Path) -> RunContext:
             cells[(sid, "<empty>", p.name)] = []
             cell_paths[(sid, "<empty>", p.name)] = p
             continue
+        # Override regex-parsed sid with authoritative row value.
+        sid = rows[0].get("scenario_id", sid)
         model = rows[0].get("model", "<unknown>")
         condition = rows[0].get("condition", "<unknown>")
         cells[(sid, model, condition)] = rows
